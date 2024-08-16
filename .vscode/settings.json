@@ -1,0 +1,28 @@
+{
+    "files.exclude": {
+      "**/__pycache__": true,
+      "**/migrations": true
+    }, 
+      "notebook.formatOnSave.enabled": true,
+      "notebook.codeActionsOnSave": {
+          "notebook.source.fixAll": "explicit",
+          "notebook.source.organizeImports": "explicit"
+      },
+  
+      "[python]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.codeActionsOnSave": {
+          "source.fixAll": "always",
+          "source.organizeImports": "always"
+        }
+      },
+      "ruff.organizeImports": true,
+      "files.autoSave": "afterDelay",
+      "ruff.showNotifications": "onError",
+      "files.autoSaveDelay": 100,
+      "python.analysis.typeCheckingMode": "basic",
+      "python.analysis.autoImportCompletions": true
+  
+      
+    }
