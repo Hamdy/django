@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hello world!</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link nonce="{{request.csp_nonce}}"
+            href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap"
+            rel="stylesheet"
+        />
+        <style nonce="{{request.csp_nonce}}">
+            h1 {
+                font-family: "Yellowtail", cursive;
+                margin: 0.5em 0 0 0;
+                color: #0069ff;
+                font-size: 4em;
+                line-height: 0.6;
+            }
+
+            img {
+                border-radius: 100%;
+                border: 6px solid #0069ff;
+            }
+
+            .center {
+                text-align: center;
+                position: absolute;
+                top: 50vh;
+                left: 50vw;
+                transform: translate(-50%, -50%);
+            }
+        </style>
+        <script nonce="{{request.csp_nonce}}">
+            console.log("Hello from the console!");
+        </script>
+    </head>
+    <body>
+        <div class="center">
+            <img src="https://html.sammy-codes.com/images/small-profile.jpeg" />
+            <h1>Hello, Sammy!</h1>
+        </div>
+    </body>
+</html>
