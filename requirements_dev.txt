@@ -1,7 +1,11 @@
 asgiref==3.8.1
 asttokens==2.4.1
+cffi==1.17.0
+cryptography==43.0.0
 decorator==5.1.1
 Django==5.1
+django-cors-headers==4.4.0
+django-encrypted-model-fields==0.6.5
 djangorestframework==3.15.2
 executing==2.0.1
 ipdb==0.13.13
@@ -13,11 +17,12 @@ pexpect==4.9.0
 prompt_toolkit==3.0.47
 ptyprocess==0.7.0
 pure_eval==0.2.3
+pycparser==2.22
 Pygments==2.18.0
+python-decouple==3.8
 six==1.16.0
 sqlparse==0.5.1
 stack-data==0.6.3
 traitlets==5.14.3
 typing_extensions==4.12.2
 wcwidth==0.2.13
-python-decouple==3.8

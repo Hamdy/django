@@ -28,7 +28,6 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG: bool = config('DEBUG', cast=bool)
 
-ALLOWED_HOSTS: List[str] = config('ALLOWED_HOSTS').split() #type:ignore
 
 
 # Application definition
@@ -40,11 +39,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -124,3 +125,35 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# @@@@@@@@@@@ Security Settings @@@@@@@@@@@
+
+# 1. cookies
+
+SESSION_COOKIE_SECURE = True # HTTPS only session Cookies
+CSRF_COOKIE_SECURE = True # HTTPS only csrf cookies 
+SESSION_COOKIE_HTTPONLY = True # Disallow js from accessing session cookies
+
+# 2. HTTPS only
+SECURE_SSL_REDIRECT = not DEBUG # HTTPS only (in production)
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True # HTTPS for subdomains
+SECURE_HSTS_SECONDS = 31536000 # Force browsers to refuse to connect insecurely (1y) 
+SECURE_HSTS_PRELOAD = True
+
+# 3. Allowed hosts
+ALLOWED_HOSTS: List[str] = config('ALLOWED_HOSTS').split() #type:ignore
+
+# 4. Admins
+ADMINS = [('hamdy', 'a@a.com')]
+
+# 4. CORS
+
+# add corsheaders to installed apps
+
+# add 'corsheaders.middleware.CorsMiddleware', before 'corsheaders.middleware.CorsMiddleware'
+
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:8000',
+    'http://127.0.0.1:8000',
+]
+
