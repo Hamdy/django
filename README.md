@@ -1,5 +1,15 @@
 # Django Tutorial
 
+- [Add Vscode](https://github.com/Hamdy/django/commit/3a838ebe082307c3e28215582aa410069af64bb1)
+- [Add Requirements](https://github.com/Hamdy/django/commit/b2a9ec77e683ebc68122c435384a28c33ecbe11d)
+- [Add Environment Variables support](https://github.com/Hamdy/django/commit/091f39c84fcd7f5286e0e4ba4de992b8dadc339a)
+- [Add Security Settings](https://github.com/Hamdy/django/commit/fbe94de963228a3082bc821546afb65563ced7fb)
+- [Add Models and model admin examples](https://github.com/Hamdy/django/commit/6bc4f86f2ffab7d9175e2debf92c9ed200b58535)
+- [Custom user, Auth backend, File backend, and a middleware](https://github.com/Hamdy/django/commit/6bc4f86f2ffab7d9175e2debf92c9ed200b58535)
+- [Content Security Policy / CSP](https://github.com/Hamdy/django/commit/53aefe85c39ea5633e885d66a283208e2b905fc0)
+- [Add Commands](https://github.com/Hamdy/django/commit/4ea648e75cfa0e542d620930d4e60559c01ded33)
+
+
 ## Security 
 
 - **General Security settings**
